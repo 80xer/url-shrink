@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 1130px;
+      border: 1px solid #a3a3a3;
+      min-height: 200px;
+      height: 100%;
+      margin: 0 auto;
+      padding: 12px;
+    }
+    .container form {
+      display: flex;
+    }
+    .container form input {
+      font-size: 14px;
+      padding: 8px 10px;
+      flex: 1;
+    }
+    .container form button {
+      width :120px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>URL SHORTENER</h1>
+    <form action="/shrink" method="post">
+      <input type="url">
+      <button type="submit">SHRINK</button>
+    </form>
+  </div>
+</body>
+</html>
