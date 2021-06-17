@@ -29,15 +29,36 @@
     .container form button {
       width :120px;
     }
+    .list-item {
+      display: flex;
+      flex-direction: row;
+    }
+    .list-item p {
+      width: 200px;
+    }
+    .list-item a {
+      display: inline-block;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>URL SHORTENER</h1>
     <form action="/shrink" method="post">
-      <input type="url">
+      <input name="url" id="url" type="">
       <button type="submit">SHRINK</button>
     </form>
+    <br/>
+    <hr/>
+    <br/>
+    <ul>
+      <% data.forEach(function(d){ %>
+        <li class="list-item">
+          <p><%= d.origin %></p>
+          <a href="/<%= d.shrink %>">/<%= d.shrink %></a>
+        </li>
+      <% }); %>
+    </ul>
   </div>
 </body>
 </html>
